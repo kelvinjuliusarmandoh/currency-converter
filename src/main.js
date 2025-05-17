@@ -15,11 +15,11 @@ const resultField = document.querySelector('#result');
 const fromCurrencyFlag = document.querySelector('#from-currency-flag');
 const toCurrencyFlag = document.querySelector('#to-currency-flag');
 
-console.log(typeof fromCurrency.value)
-console.log(fromCurrency.value === 'USD' && toCurrency.value === 'IDR')
 function convertCurrency() {
   let toResult = 0;
   
+  alertFunction()
+
   if (fromCurrency.value === 'USD' && toCurrency.value === 'IDR') {
     console.log('INSIDE')
     toResult = amountInput.value * 16488;
@@ -48,6 +48,11 @@ function convertCurrency() {
   }
 }
 
+function alertFunction() {
+  if (amountInput.value === '0') {
+    alert('Must Put Numbers');
+  }
+}
 convertButton.addEventListener('click', () => {
   convertCurrency()
 });
