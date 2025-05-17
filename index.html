@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="flex items-center justify-center bg-slate-300">
+    <!-- Converter Box Start Here -->
+    <div id="converter-box" class="mt-40 container w-xs h-140 rounded-3xl bg-white">
+      <div class="flex justify-between items-center relative">
+        <!-- Title Start Here -->
+        <h1 class="mx-8 mt-8 mb-6 font-inter text-2xl text-teal-400 font-semibold">Currency 
+          <span class="block text-teal-400 font-semibold">Converter</span>
+        </h1>
+        <img class="absolute block right-10 bottom-3" width="80"  src="img/money-converter.png" alt="">
+        <!-- Title End Here -->
+      </div>
+      
+
+      <!-- Content Start Here -->
+      <div class="text-md mx-8">
+        <label for="from-currency" class="font-semibold">From:</label>
+        <select id="from-currency" class="w-full border-3 border-slate-300 rounded-sm mt-2 mb-6" name="from-currency-lists">
+          <option value="default" disabled selected>------- Select an Option --------</option>
+          <option value="IDR">IDR</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+        </select>
+
+        <label for="to-currency" class="font-semibold">To:</label>
+        <select id="to-currency" class="w-full border-3 border-slate-300 rounded-sm mt-2 mb-6" name="from-currency-lists">
+          <option value="default" disabled selected>------- Select an Option --------</option>
+          <option value="IDR">IDR</option>
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+        </select>
+
+        <label for="amount" class="font-semibold flex justify-between">Amount:
+          <span id="from-currency-flag" class="invisible">-</span>
+        </label>
+        <input id="amount" class="w-full border-3 border-slate-300 mt-2 pl-2" placeholder="Enter your money"></input>
+
+        <div class="flex justify-center items-center mb-6">
+          <button id="convert-btn" class="mt-10 w-full p-2 bg-teal-400 hover:bg-teal-300 rounded-lg cursor-pointer" >
+            Convert It
+          </button>
+        </div>
+
+        <label for="result" class="font-semibold flex justify-between">Result:
+          <span id="to-currency-flag" class="invisible">-</span>
+        </label>
+        <div id="result" class="w-full border-2 pl-2 mt-2 border-slate-300">
+          -
+        </div>
+      </div>
+    </div>
+    <!-- Converter Box End Here -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
